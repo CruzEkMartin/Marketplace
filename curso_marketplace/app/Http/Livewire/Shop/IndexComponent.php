@@ -28,5 +28,8 @@ class IndexComponent extends Component
             'attributes' => array(),
             'associatedModel' => $product
         ));
+
+        $this->emit('message','El producto se ha agregado correctamente.');
+        $this->emitTo('shop.cart-component','add_to_cart');
     }
 }
