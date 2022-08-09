@@ -15,8 +15,8 @@
                         <td>{{ $cart_item->name }}</td>
                         <td>
                         <input type="number" 
-                        id="v{{ cart_item->id }}"
-                        wire:change="update_quantity({{ $cart_item->id }} , $('#v' + {{ $cart_item->id}}).val())"
+                        id="Cantidad{{ $cart_item->id }}"
+                        wire:change="update_quantity({{ $cart_item->id }} , $('#Cantidad' + {{ $cart_item->id}}).val())"
                         class="form-control" value="{{ $cart_item->quantity}}">
                         </td>
                         <td>{{ \Cart::session(auth()->id())->get($cart_item->id)->getPriceSum() }}</td>
