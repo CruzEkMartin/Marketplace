@@ -14,19 +14,20 @@ class IndexComponent extends Component
             ->section('content');
     }
 
-    public function update_quantity($itemid, $quantity)
+    public function update_quantity($itemId, $quantity)
     {
 
         // update the item on cart
-        \Cart::session(auth()->id())->update($itemid, [
+        \Cart::session(auth()->id())->update($itemId, [
             'quantity' => array(
-                'relative'=>false,
+                'relative' => false,
                 'value' => $quantity
             ),
         ]);
     }
 
-    public function delete_item()
-    {
+    public function delete_item($itemId){
+        // delete an item on cart
+        \Cart::session(auth()->id())->remove($itemId);
     }
 }
