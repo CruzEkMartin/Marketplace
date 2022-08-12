@@ -29,6 +29,8 @@ class CreateOrdersTable extends Migration
             $table->string('shipping_zipcode');
             $table->string('shipping_phone');
 
+            $table->string('notes')->nullable();
+
             $table->string('billing_fullname');
             $table->string('billing_address');
             $table->string('billing_city');
