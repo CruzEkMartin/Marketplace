@@ -3,7 +3,8 @@
         <i class="fa-solid fa-cart-shopping"></i>
     </a>
     @auth
-    {{ \Cart::session(auth()->id())->getTotalQuantity() }}
+    {{-- getTotalQuantity() --}}    
+    {{ \Cart::session(auth()->id())->getContent()->count() }}
     @else
     0
     @endauth

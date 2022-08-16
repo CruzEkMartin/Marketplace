@@ -61,6 +61,21 @@
                 </span>
             @enderror
         </div>
+        <br>
+
+        <div class="btn-group" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input type="radio" name="" id="" autocomplete="off">
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="" id="" autocomplete="off">
+            </label>
+            <label class="btn btn-primary">
+                <input type=" radio" name="" id=" " autocomplete="off ">
+            </label>
+        </div>
+
+       
 
         <br>
         <button type="button" wire:click="make_order()" class="btn btn-primary">Realizar pedido</button>

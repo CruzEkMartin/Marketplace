@@ -17,6 +17,8 @@ class IndexComponent extends Component
     public function update_quantity($itemId, $quantity)
     {
 
+        
+
         // update the item on cart
         \Cart::session(auth()->id())->update($itemId, [
             'quantity' => array(
